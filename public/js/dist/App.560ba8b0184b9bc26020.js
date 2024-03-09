@@ -2,6 +2,39 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/components/Instagram.js":
+/*!*************************************!*\
+  !*** ./src/components/Instagram.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Instagram)
+/* harmony export */ });
+/* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function Instagram() {
+  function openInstagramPost() {
+    var url = "https://www.instagram.com/p/xxxxx/";
+    var windowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
+    window.open(url, "_blank", windowFeatures);
+  }
+  let link = 'https://www.instagram.com/p/CdraSwuM-Lw/?utm_source=ig_embed&amp;utm_campaign=loading';
+  return /*#__PURE__*/React.createElement("div", {
+    className: "InstagramComponent"
+  }, /*#__PURE__*/React.createElement("blockquote", {
+    className: "media",
+    "data-instgrm-captioned": true,
+    "data-instgrm-permalink": link,
+    "data-instgrm-version": "13"
+  }), /*#__PURE__*/React.createElement("button", {
+    onClick: () => {
+      openInstagramPost();
+    }
+  }, "Open Instagram Post"));
+}
+
+/***/ }),
+
 /***/ "./src/components/NavBar.js":
 /*!**********************************!*\
   !*** ./src/components/NavBar.js ***!
@@ -29,6 +62,95 @@ const NavBar = props => {
   }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavBar);
+
+/***/ }),
+
+/***/ "./src/components/Sheets.js":
+/*!**********************************!*\
+  !*** ./src/components/Sheets.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "SheetsComponent"
+  }, /*#__PURE__*/React.createElement("iframe", {
+    className: "iframe",
+    src: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGM2bcNxW9mAuIU95k3llQI_n396jS7gEC-2j7huUvP8ctfU_OlkSygpK2A3uA2kjIphcQX8L_oJ6p/pubhtml"
+  }));
+}
+
+/***/ }),
+
+/***/ "./src/components/WasteFacts.js":
+/*!**************************************!*\
+  !*** ./src/components/WasteFacts.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ WasteFacts)
+/* harmony export */ });
+/* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function WasteFacts() {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "WasteFactsComponent"
+  }, /*#__PURE__*/React.createElement("h2", null, "Putting Waste into Perspective"), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
+    href: "https://www.janssenpmp.com/sustainability/articles/up-to-40-percent-of-food-is-wasted-before-it-reaches-the-market#:~:text=According%20to%20the%20Food%20and,not%20reach%20the%20end%20consumer."
+  }, "40% of food"), " is wasted each year in the United States. But what does that look like? Where does that all go\u2014or not go? That is nearly ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.rts.com/resources/guides/food-waste-america/"
+  }, "60 million tons"), "\u2014120 billion pounds\u2014each year, worth ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.forbes.com/sites/chloesorvino/2022/07/14/food-waste-costs-us-taxpayers-billions-of-dollars-a-year/?sh=51a4114542ea"
+  }, "$400 billion"), ".", /*#__PURE__*/React.createElement("sup", {
+    className: "superscript"
+  }, "1"), " ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.ers.usda.gov/data-products/ag-and-food-statistics-charting-the-essentials/food-security-and-nutrition-assistance/#:~:text=The%20prevalence%20of%20food%20insecurity,of%20a%20lack%20of%20resources."
+  }, "12.8% of households"), /*#__PURE__*/React.createElement("sup", {
+    className: "superscript"
+  }, "2"), " in the US\u2014including ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.feedingamerica.org/hunger-in-america/child-hunger-facts#:~:text=More%20than%2013%20million%20children,will%20get%20their%20next%20meal."
+  }, "13 million children"), "\u2014are food insecure while 40% of the food resources are wasted. Hunger is not unsolvable; it is not a problem of resources but of structure."), /*#__PURE__*/React.createElement("p", null, "What about that $400 billion? Wasted food costs taxpayers ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.forbes.com/sites/chloesorvino/2022/07/14/food-waste-costs-us-taxpayers-billions-of-dollars-a-year/?sh=51a4114542ea"
+  }, "billions"), " each year, as corporations receive a tax-deduction for the 'cost of shrinkage' or loss of profits.", /*#__PURE__*/React.createElement("sup", {
+    className: "superscript"
+  }, "3"), " Produce that winds up in the landfill cannot break down properly due to a lack of oxygen and produces methane, which has a greenhouse effect ", /*#__PURE__*/React.createElement("a", {
+    href: "https://energy.ec.europa.eu/topics/oil-gas-and-coal/methane-emissions_en#:~:text=In%20fact%2C%20methane's%20ability%20to,on%20a%2020%2Dyear%20timescale."
+  }, "~80x more potent than that of CO2"), ". Globally, food waste accounts for ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.forbes.com/sites/chloesorvino/2022/07/14/food-waste-costs-us-taxpayers-billions-of-dollars-a-year/?sh=51a4114542ea"
+  }, "8% of all greenhouse gas emisions"), "."), /*#__PURE__*/React.createElement("p", null, "Moreover, the farming practices used to maintain the steady flow of food through the market has adverse effects on soil health and nutrient density in food. Monocropping depletes soil of nutrients and affects ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.nhm.ac.uk/discover/soil-degradation.html#:~:text=Soil%20can%20lose%20certain%20physical,such%20as%20poor%20land%20management."
+  }, "the biodiversity of microbiota"), " that play a crucial symbiotic role in fighting off pests and promoting plant growth and health. Disrupting the topsoil also diminishes the amount of fixed carbon it can store ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.nhm.ac.uk/discover/soil-degradation.html#:~:text=Soil%20can%20lose%20certain%20physical,such%20as%20poor%20land%20management."
+  }, "by 50-75%"), ", thereby contributing to and exacerbating the effects of climate change. In order to combat weeds and pests, farmers resort to toxic pesticides and herbicides that further damage the soil microbiome, creating a negative feedback loop."), /*#__PURE__*/React.createElement("p", null, "As of 2019, estimates say that the food industry generates ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.plasticsoupfoundation.org/en/2021/12/food-production-causes-plastic-pollution/#:~:text=FAO%20estimates%20that%20in%202019,biggest%20user%2C%20up%20to%202030."
+  }, "12.5 million tons of single use plastic"), " annually. Assuming an even 40% of this plastic goes to the landfill, that is 5 million tons of unnecessary plastic each year. Plastic is not 'broken down' and recycled like organic molecules; instead, it breaks apart into smaller microplastics and nanoplastics, which get into our water and food. These microplastics have been detected in blood samples in almost ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.theguardian.com/environment/2022/mar/24/microplastics-found-in-human-blood-for-first-time#:~:text=Microplastic%20pollution%20has%20been%20detected,and%20may%20lodge%20in%20organs."
+  }, "80% of people tested"), " and in ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.theguardian.com/environment/2024/feb/27/microplastics-found-every-human-placenta-tested-study-health-impact#:~:text=The%20research%2C%20published%20in%20the,common%20plastics%20detected%2C%20after%20polyethylene."
+  }, "every human placenta tested"), ". While research on ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10151227/"
+  }, "the health effects of exposure to microplastics on humans"), " is still limited, research shows that high ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9205308/"
+  }, "high concentrations of microplastics are harmful to smaller life forms"), "."), /*#__PURE__*/React.createElement("div", {
+    className: "footnotes"
+  }, /*#__PURE__*/React.createElement("h3", null, "Footnotes"), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("sup", {
+    className: "superscript"
+  }, "1"), " The average grocer in the U.S. is estimated to waste between ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.forbes.com/sites/chloesorvino/2022/07/14/food-waste-costs-us-taxpayers-billions-of-dollars-a-year/?sh=51a4114542ea"
+  }, "$5,000 and $10,000"), " of food each week."), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("sup", {
+    className: "superscript"
+  }, "2"), " The 2022 ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.census.gov/library/publications/2023/demo/p60-279.html#:~:text=Highlights,and%20Table%20A%2D1)."
+  }, "average annual household income was $74580"), ". That is ~ $6,215 per month; in other words, the average grocer wastes more than the average household monthly income nearly every single week of the year."), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("sup", {
+    className: "superscript"
+  }, "3"), " Current tax law actually creates \"", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.forbes.com/sites/chloesorvino/2022/07/14/food-waste-costs-us-taxpayers-billions-of-dollars-a-year/?sh=51a4114542ea"
+  }, "a powerful disincentive"), "\" to improving or eradicating this problem.")));
+}
 
 /***/ }),
 
@@ -62,16 +184,14 @@ root.render( /*#__PURE__*/React.createElement(react__WEBPACK_IMPORTED_MODULE_0__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Sheets__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Sheets */ "./src/components/Sheets.js");
 /* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
 
 function About(props) {
   return /*#__PURE__*/React.createElement("div", {
     className: "AboutPage"
-  }, /*#__PURE__*/React.createElement("center", null, /*#__PURE__*/React.createElement("h1", null, "This is the ", props.page, " page"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("img", {
-    src: "https://media.git.generalassemb.ly/user/15881/files/8b5cd280-1f37-11ea-9c27-c9bb294aa61f"
-  })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("img", {
-    src: "https://lh4.googleusercontent.com/Wp6jVNMlvYa2Q8BZ6kIzCbbasfZmNSaWIBJjLKEIDzYB9O6skIt3zyrpqPUjTSXG9WQF23WihWl43h_9UHZtugB96EAulCDDqNtB-KtWYWXJbTTMgHGrG7WU881GACAsrZXe8pJlux6xqGlB46AQliYn=s2048"
-  }))));
+  }, /*#__PURE__*/React.createElement("center", null, /*#__PURE__*/React.createElement("h1", null, "This is the ", props.page, " page"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "Trash Pandas Waste Spreadsheet"), /*#__PURE__*/React.createElement(_components_Sheets__WEBPACK_IMPORTED_MODULE_1__["default"], null))));
 }
 
 /***/ }),
@@ -87,16 +207,14 @@ function About(props) {
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Instagram__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Instagram */ "./src/components/Instagram.js");
 /* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
 
 function Contact(props) {
   return /*#__PURE__*/React.createElement("div", {
     className: "ContactPage"
-  }, /*#__PURE__*/React.createElement("center", null, /*#__PURE__*/React.createElement("h1", null, "This is the ", props.page, " page"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("img", {
-    src: "https://media.git.generalassemb.ly/user/15881/files/8b5cd280-1f37-11ea-9c27-c9bb294aa61f"
-  })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("img", {
-    src: "https://lh4.googleusercontent.com/Wp6jVNMlvYa2Q8BZ6kIzCbbasfZmNSaWIBJjLKEIDzYB9O6skIt3zyrpqPUjTSXG9WQF23WihWl43h_9UHZtugB96EAulCDDqNtB-KtWYWXJbTTMgHGrG7WU881GACAsrZXe8pJlux6xqGlB46AQliYn=s2048"
-  }))));
+  }, /*#__PURE__*/React.createElement("center", null, /*#__PURE__*/React.createElement("h1", null, "This is the ", props.page, " page"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "Trash Pandas Instagram"), /*#__PURE__*/React.createElement(_components_Instagram__WEBPACK_IMPORTED_MODULE_1__["default"], null))));
 }
 
 /***/ }),
@@ -112,16 +230,18 @@ function Contact(props) {
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_WasteFacts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/WasteFacts */ "./src/components/WasteFacts.js");
 /* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
 
 function Home(props) {
   return /*#__PURE__*/React.createElement("div", {
     className: "HomePage"
-  }, /*#__PURE__*/React.createElement("center", null, /*#__PURE__*/React.createElement("h1", null, "This is the ", props.page, " page"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("img", {
-    src: "https://media.git.generalassemb.ly/user/15881/files/8b5cd280-1f37-11ea-9c27-c9bb294aa61f"
-  })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("img", {
-    src: "https://lh4.googleusercontent.com/Wp6jVNMlvYa2Q8BZ6kIzCbbasfZmNSaWIBJjLKEIDzYB9O6skIt3zyrpqPUjTSXG9WQF23WihWl43h_9UHZtugB96EAulCDDqNtB-KtWYWXJbTTMgHGrG7WU881GACAsrZXe8pJlux6xqGlB46AQliYn=s2048"
-  }))));
+  }, /*#__PURE__*/React.createElement("center", null, /*#__PURE__*/React.createElement("div", {
+    className: "background"
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "https://media.istockphoto.com/id/838559072/photo/new-york-skyline-at-sunset.jpg?s=612x612&w=0&k=20&c=HTV4d0kBuAHQjOjfORFv9BJmnNjM359-acMFe83zoIc="
+  })), /*#__PURE__*/React.createElement("h1", null, "Trash Pandas NYC"), /*#__PURE__*/React.createElement(_components_WasteFacts__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
 }
 
 /***/ }),
@@ -363,4 +483,4 @@ const routes = [{
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.7356faa4a7048c72bddea45e0b22f2f0.js.map
+//# sourceMappingURL=App.5323e8435f21ebe9db53392dc3f3040f.js.map
