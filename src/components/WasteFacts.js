@@ -22,6 +22,11 @@ export default function WasteFacts(){
             <p>Plastic is not 'broken down' and recycled like organic molecules; instead, it breaks apart into smaller microplastics and nanoplastics, which get into our water and food.</p>
             <p>These microplastics have been detected in blood samples in almost <a href="https://www.theguardian.com/environment/2022/mar/24/microplastics-found-in-human-blood-for-first-time#:~:text=Microplastic%20pollution%20has%20been%20detected,and%20may%20lodge%20in%20organs.">80% of people tested</a> and in <a href="https://www.theguardian.com/environment/2024/feb/27/microplastics-found-every-human-placenta-tested-study-health-impact#:~:text=The%20research%2C%20published%20in%20the,common%20plastics%20detected%2C%20after%20polyethylene.">every human placenta tested</a>.</p>
             <p>While research on <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10151227/">the health effects of exposure to microplastics on humans</a> is still limited, research shows that high <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9205308/">high concentrations of microplastics are harmful to smaller life forms</a>.</p>
+            <div className="footnotes">
+                <p><sup>1</sup> The average grocer in the U.S. is estimated to waste between <a href="https://www.forbes.com/sites/chloesorvino/2022/07/14/food-waste-costs-us-taxpayers-billions-of-dollars-a-year/?sh=51a4114542ea">$5,000 and $10,000</a> of food each week.</p>
+                <p><sup>2</sup> The 2022 <a href="https://www.census.gov/library/publications/2023/demo/p60-279.html#:~:text=Highlights,and%20Table%20A%2D1).">average annual household income was $74580</a>. That is ~ $6,215 per month; in other words, the average grocer wastes more than the average household monthly income nearly every single week of the year.</p>
+                <p><sup>3</sup> Current tax law actually creates "<a href="https://www.forbes.com/sites/chloesorvino/2022/07/14/food-waste-costs-us-taxpayers-billions-of-dollars-a-year/?sh=51a4114542ea">a powerful disincentive</a>" to improving or eradicating this problem.</p>
+            </div>
         </div>
     )
 }
