@@ -4,21 +4,46 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 const mongoose = require('mongoose');
 const path = require('path');
+const { Client } = require('pg')
 
-/* Add MongoDB here after connecting database in .env
-const MONGODB_URI = process.env.MONGODB_URI
-const db = mongoose.connection;
+const client = new Client({
+	user: process.env.USER,
+	host: process.env.HOST,
+	database: process.env.DATABASE,
+	password: process.env.PASSWORD,
+	port: process.env.PORT,
+	ssl: {
+		rejectUnauthorized: false,
+	}
+})
 
-mongoose.connect(MONGODB_URI);
-db.on('open', () => {
-    console.log('Mongo is Connected');
-});
-*/
+// const postgres = require('postgres');
+
+// let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
+
+// const sql = postgres({
+// 	host: PGHOST,
+// 	database: PGDATABASE,
+// 	username: PGUSER,
+// 	password: PGPASSWORD,
+// 	port: 5432,
+// 	ssl: 'require',
+// 	connection: {
+// 		options: `project=${ENDPOINT_ID}`,
+// 	},
+// });
+
+// async function getPgVersion() {
+// 	const result = await sql`select version()`;
+// 	console.log(result);
+// }
+
+// getPgVersion();
 
 /* Middleware */
 app.use(express.json());
 if (process.env.NODE_ENV !== 'development'){
-  app.use(express.static('public'))
+	app.use(express.static('public'))
 }
 
 /* Controller Goes Here Remove the tes*/
