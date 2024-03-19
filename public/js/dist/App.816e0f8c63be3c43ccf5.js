@@ -103,7 +103,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     src: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGM2bcNxW9mAuIU95k3llQI_n396jS7gEC-2j7huUvP8ctfU_OlkSygpK2A3uA2kjIphcQX8L_oJ6p/pubhtml"
   }), /*#__PURE__*/React.createElement("div", {
     className: "neondb"
-  }, /*#__PURE__*/React.createElement("h2", null, "SQL Datebase"), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("h2", {
+    id: "SQL"
+  }, "SQL Datebase"), /*#__PURE__*/React.createElement("div", {
     className: "corps"
   }, corporations.map(corporation => /*#__PURE__*/React.createElement("div", {
     className: "corp"
@@ -235,7 +237,7 @@ function About(props) {
     className: "background"
   }, /*#__PURE__*/React.createElement("img", {
     src: "https://res.cloudinary.com/dlqhluouv/image/upload/v1710826594/IMG_0150_q61tb8.jpg"
-  })), /*#__PURE__*/React.createElement("h1", null, "About the Project"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "Who are we?"), /*#__PURE__*/React.createElement("p", null, "My name is Michael. I am a (former) educator, software developer, writer, and social activist. "), /*#__PURE__*/React.createElement("p", null, "My partner Magdalena and I began a journey in November of 2019. We had been dumpster diving around Brooklyn and Manhattan since 2018 when we decided to create an instagram account to document the quantity (and quality) of all the things we were finding in the trash. Toothpaste. Candy bars. Razors. Feminine hygeine products. Crackers and other dry goods. Holiday goods. And so much more!"), /*#__PURE__*/React.createElement("p", null, "When we made our instagram, I also started a ", /*#__PURE__*/React.createElement("a", {
+  })), /*#__PURE__*/React.createElement("h1", null, "About the Project"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "Who are we?"), /*#__PURE__*/React.createElement("p", null, "My name is Michael. I am a (former) educator, software developer, writer, and social activist. "), /*#__PURE__*/React.createElement("p", null, "Magdalena and I began a journey in November of 2019. We had been dumpster diving around Brooklyn and Manhattan since 2018 when we decided to create an instagram account to document the quantity (and quality) of all the things we were finding in the trash. Toothpaste. Candy bars. Razors. Feminine hygeine products. Crackers and other dry goods. Holiday goods. And so much more!"), /*#__PURE__*/React.createElement("p", null, "When we made our instagram, I also started a ", /*#__PURE__*/React.createElement("a", {
     href: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGM2bcNxW9mAuIU95k3llQI_n396jS7gEC-2j7huUvP8ctfU_OlkSygpK2A3uA2kjIphcQX8L_oJ6p/pubhtml"
   }, "spreadsheet"), " to document the total value of everything we were pulling from the trash\u2014six nights a week, 52 weeks a year!"), /*#__PURE__*/React.createElement("p", null, "While we have not posted on our instagram in quite sometime nor have we updated our spreadsheet, the 'data' we collected was monumental. Just the two of us checking a couple of stores' dumpsters each night were able to document over $150,000 of wasted goods in the year and a half we collected data, which was more than our combined income at the time! We didn't sell any of it. We 'redistributed' it out to friends and across our community at work and to our community through neighborhood fridges/pantries and directly off our stoop. "), /*#__PURE__*/React.createElement("p", null, "But if this is the trend for small cornerstore CVS' and Walgreens in the little sliver of New York that we covered each night, imagine this trend magnified across the city, the country, the entire global market."), /*#__PURE__*/React.createElement("h2", null, "The Trash Pandas Dumpster Diving Spreadsheet"), /*#__PURE__*/React.createElement(_components_Sheets__WEBPACK_IMPORTED_MODULE_1__["default"], null))));
 }
@@ -531,4 +533,4 @@ const routes = [{
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.317bf7b98e42fdd9ae81584e8fca8059.js.map
+//# sourceMappingURL=App.e2b0cc827591fb4517b0f17b91b7144a.js.map
