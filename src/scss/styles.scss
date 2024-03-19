@@ -12,9 +12,9 @@ body {
   justify-content: space-around;
   width: 100%;
   background-color: #f0f0f0;
-  height: 2rem;
+  height: 3rem;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: orangered;
   a {
     color: orangered;
@@ -30,9 +30,14 @@ body {
   h1 {
     font-size: 3rem;
   }
+  #title{
+    padding-top:4vh;
+    padding-bottom:4vh;
+  }
   .background{
     z-index:-1;
     position: absolute;
+    margin-top:0;
     opacity:.3;
     img{
       width:100vw;
@@ -40,9 +45,49 @@ body {
   }
 }
 
+
+
 .AboutPage {
   h1 {
     font-size: 3rem;
+    color: orangered;
+  }
+  p {
+    margin-top:1rem;
+    margin-left:5vw;
+    margin-right:5vw;
+    font-size:1.2rem;
+    color:transparent;
+  }
+  p, a, h2{
+    color: rgba(255, 255, 255, 0); 
+    transition: color .5s linear;
+  }
+
+  p:hover {
+    color: rgba(255, 255, 255, 1); 
+    a{ 
+      color: rgba(255, 255, 255, 1); 
+    }
+  }
+
+  h2:hover {
+    color: orangered;
+  }
+
+  h2{
+    margin-top:2rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  .background{
+    z-index:-1;
+    position: absolute;
+    margin-top:0;
+    opacity:.85;
+    img{
+      width:100vw;
+    };
   }
 }
 
@@ -61,9 +106,66 @@ body {
 }
 
 .SheetsComponent{
+  h1{
+    margin-top:2rem;
+  }
   iframe{
     height: 90vh;
     width: 90vw;
+    opacity:.0;
+    transition: opacity 2s linear
+  }
+  iframe:hover{
+    opacity:1
+  }
+  .neondb{
+    #SQL{
+      opacity:1;
+      color: black;
+    }
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    background-color: rgb(246, 245, 245);
+    align-items: center;
+    .items{
+      button{
+        height: 5vw;
+        min-width: 15vw;
+        white-space:nowrap;
+      }
+    }
+    .corps{
+      margin-top:2rem;
+      display:flex;
+      flex-direction: row;
+      .corp{
+        display:flex;
+        flex-direction: column;
+      }
+    }
+    button{
+      background-color: white;
+      border-color: none;
+      color: black;
+      width:4.3vw;
+      white-space:nowrap;
+    }
+    .corporationHeader{
+      display: flex; 
+      flex-direction:column;
+      #corporationName{
+        width:90vw;
+      }
+      .columnHeaders{
+        display: flex; 
+        flex-direction: row;
+      }
+    }
+    .item{
+      display:flex;
+      flex-direction:row;
+    }
   }
 }
 

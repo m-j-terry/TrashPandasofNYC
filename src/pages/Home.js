@@ -5,9 +5,9 @@ export default function Home(props) {
 		<div className="HomePage">
 			<center>
 			<div className="background">
-				<img src="https://media.istockphoto.com/id/838559072/photo/new-york-skyline-at-sunset.jpg?s=612x612&w=0&k=20&c=HTV4d0kBuAHQjOjfORFv9BJmnNjM359-acMFe83zoIc="></img>
+				<img src='https://whatdesigncando.s3.eu-central-1.amazonaws.com/app/uploads/20210120101404/iStock-927987734-1440x959.jpg'></img>
 			</div>
-			<h1>Trash Pandas NYC</h1>
+			<h1 id="title">Trash Pandas of NYC</h1>
 			<WasteFacts />
 			</center>
 		</div>

@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/components/Instagram.js":
@@ -7,15 +8,10 @@
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Instagram)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-(__webpack_require__(/*! dotenv */ "./node_modules/dotenv/lib/main.js").config)();
 function Instagram() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", null));
 }
@@ -28,7 +24,6 @@ function Instagram() {
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -59,18 +54,74 @@ const NavBar = props => {
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  const [corporations, setCorporations] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
+  const [corporation, setCorporation] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
+  const [items, setItems] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    function fetchCorporations() {
+      return _fetchCorporations.apply(this, arguments);
+    }
+    function _fetchCorporations() {
+      _fetchCorporations = _asyncToGenerator(function* () {
+        const response = yield fetch('/api/corporations/');
+        const corps = yield response.json();
+        console.log(corps.rows);
+        setCorporations(corps.rows);
+      });
+      return _fetchCorporations.apply(this, arguments);
+    }
+    fetchCorporations();
+  }, []);
+  function selectCorporation(_x) {
+    return _selectCorporation.apply(this, arguments);
+  }
+  function _selectCorporation() {
+    _selectCorporation = _asyncToGenerator(function* (name) {
+      console.log(name);
+      setCorporation(name);
+      const response = yield fetch("/api/corporations/".concat(name));
+      const corp = yield response.json();
+      console.log(corp);
+      setItems(corp);
+    });
+    return _selectCorporation.apply(this, arguments);
+  }
   return /*#__PURE__*/React.createElement("div", {
     className: "SheetsComponent"
   }, /*#__PURE__*/React.createElement("iframe", {
     className: "iframe",
     src: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGM2bcNxW9mAuIU95k3llQI_n396jS7gEC-2j7huUvP8ctfU_OlkSygpK2A3uA2kjIphcQX8L_oJ6p/pubhtml"
-  }));
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "neondb"
+  }, /*#__PURE__*/React.createElement("h2", null, "SQL Datebase"), /*#__PURE__*/React.createElement("div", {
+    className: "corps"
+  }, corporations.map(corporation => /*#__PURE__*/React.createElement("div", {
+    className: "corp"
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "corpsButton",
+    onClick: () => selectCorporation(corporation.name)
+  }, corporation.name), /*#__PURE__*/React.createElement("button", null, "$", corporation.total)))), items.length > 1 && /*#__PURE__*/React.createElement("div", {
+    className: "items"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "corporationHeader"
+  }, /*#__PURE__*/React.createElement("button", {
+    id: "corporationName"
+  }, corporation), /*#__PURE__*/React.createElement("div", {
+    className: "columnHeaders"
+  }, /*#__PURE__*/React.createElement("button", null, "date"), /*#__PURE__*/React.createElement("button", null, "name"), /*#__PURE__*/React.createElement("button", null, "defects"), /*#__PURE__*/React.createElement("button", null, "units"), /*#__PURE__*/React.createElement("button", null, "unit price"), /*#__PURE__*/React.createElement("button", null, "total"))), items.map(item => /*#__PURE__*/React.createElement("div", {
+    className: "item",
+    key: item.id
+  }, /*#__PURE__*/React.createElement("button", null, item.date), /*#__PURE__*/React.createElement("button", null, item.name), /*#__PURE__*/React.createElement("button", null, item.defects === undefined || item.defects === '' ? "nothing" : item.defects), /*#__PURE__*/React.createElement("button", null, item.units), /*#__PURE__*/React.createElement("button", null, item.price), /*#__PURE__*/React.createElement("button", null, item.total))))));
 }
 
 /***/ }),
@@ -81,7 +132,6 @@ const NavBar = props => {
   \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ WasteFacts)
 /* harmony export */ });
@@ -150,7 +200,6 @@ function WasteFacts() {
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
@@ -170,7 +219,6 @@ root.render( /*#__PURE__*/React.createElement(react__WEBPACK_IMPORTED_MODULE_0__
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ About)
 /* harmony export */ });
@@ -183,7 +231,13 @@ root.render( /*#__PURE__*/React.createElement(react__WEBPACK_IMPORTED_MODULE_0__
 function About(props) {
   return /*#__PURE__*/React.createElement("div", {
     className: "AboutPage"
-  }, /*#__PURE__*/React.createElement("center", null, /*#__PURE__*/React.createElement("h1", null, "This is the ", props.page, " page"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "Trash Pandas Waste Spreadsheet"), /*#__PURE__*/React.createElement(_components_Sheets__WEBPACK_IMPORTED_MODULE_1__["default"], null))));
+  }, /*#__PURE__*/React.createElement("center", null, /*#__PURE__*/React.createElement("div", {
+    className: "background"
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "https://res.cloudinary.com/dlqhluouv/image/upload/v1710826594/IMG_0150_q61tb8.jpg"
+  })), /*#__PURE__*/React.createElement("h1", null, "About the Project"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "Who are we?"), /*#__PURE__*/React.createElement("p", null, "My name is Michael. I am a (former) educator, software developer, writer, and social activist. "), /*#__PURE__*/React.createElement("p", null, "My partner Magdalena and I began a journey in November of 2019. We had been dumpster diving around Brooklyn and Manhattan since 2018 when we decided to create an instagram account to document the quantity (and quality) of all the things we were finding in the trash. Toothpaste. Candy bars. Razors. Feminine hygeine products. Crackers and other dry goods. Holiday goods. And so much more!"), /*#__PURE__*/React.createElement("p", null, "When we made our instagram, I also started a ", /*#__PURE__*/React.createElement("a", {
+    href: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGM2bcNxW9mAuIU95k3llQI_n396jS7gEC-2j7huUvP8ctfU_OlkSygpK2A3uA2kjIphcQX8L_oJ6p/pubhtml"
+  }, "spreadsheet"), " to document the total value of everything we were pulling from the trash\u2014six nights a week, 52 weeks a year!"), /*#__PURE__*/React.createElement("p", null, "While we have not posted on our instagram in quite sometime nor have we updated our spreadsheet, the 'data' we collected was monumental. Just the two of us checking a couple of stores' dumpsters each night were able to document over $150,000 of wasted goods in the year and a half we collected data, which was more than our combined income at the time! We didn't sell any of it. We 'redistributed' it out to friends and across our community at work and to our community through neighborhood fridges/pantries and directly off our stoop. "), /*#__PURE__*/React.createElement("p", null, "But if this is the trend for small cornerstore CVS' and Walgreens in the little sliver of New York that we covered each night, imagine this trend magnified across the city, the country, the entire global market."), /*#__PURE__*/React.createElement("h2", null, "The Trash Pandas Dumpster Diving Spreadsheet"), /*#__PURE__*/React.createElement(_components_Sheets__WEBPACK_IMPORTED_MODULE_1__["default"], null))));
 }
 
 /***/ }),
@@ -194,7 +248,6 @@ function About(props) {
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Contact)
 /* harmony export */ });
@@ -218,7 +271,6 @@ function Contact(props) {
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Home)
 /* harmony export */ });
@@ -234,8 +286,10 @@ function Home(props) {
   }, /*#__PURE__*/React.createElement("center", null, /*#__PURE__*/React.createElement("div", {
     className: "background"
   }, /*#__PURE__*/React.createElement("img", {
-    src: "https://media.istockphoto.com/id/838559072/photo/new-york-skyline-at-sunset.jpg?s=612x612&w=0&k=20&c=HTV4d0kBuAHQjOjfORFv9BJmnNjM359-acMFe83zoIc="
-  })), /*#__PURE__*/React.createElement("h1", null, "Trash Pandas NYC"), /*#__PURE__*/React.createElement(_components_WasteFacts__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
+    src: "https://whatdesigncando.s3.eu-central-1.amazonaws.com/app/uploads/20210120101404/iStock-927987734-1440x959.jpg"
+  })), /*#__PURE__*/React.createElement("h1", {
+    id: "title"
+  }, "Trash Pandas of NYC"), /*#__PURE__*/React.createElement(_components_WasteFacts__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
 }
 
 /***/ }),
@@ -246,7 +300,6 @@ function Home(props) {
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -286,7 +339,6 @@ const AppRouter = () => {
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -310,16 +362,6 @@ const routes = [{
   path: '/about'
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (routes);
-
-/***/ }),
-
-/***/ "?a0c3":
-/*!********************!*\
-  !*** fs (ignored) ***!
-  \********************/
-/***/ (() => {
-
-/* (ignored) */
 
 /***/ })
 
@@ -484,9 +526,9 @@ const routes = [{
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_dotenv_lib_main_js-node_modules_react-dom_client_js-node_modules_react-r-348d40"], () => (__webpack_require__("./src/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_react-dom_client_js-node_modules_react-router-dom_dist_index_js"], () => (__webpack_require__("./src/index.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.3814db6a07cd5953b4791d570d436577.js.map
+//# sourceMappingURL=App.317bf7b98e42fdd9ae81584e8fca8059.js.map
