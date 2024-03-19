@@ -61,11 +61,66 @@ body {
 }
 
 .SheetsComponent{
-  .media{
-    background-color: black;
-    width:10vw;
-    height:10vh;
+  iframe{
+    height: 90vh;
+    width: 90vw;
   }
+}
+
+.InstagramComponent{
+  .thumbnail{
+    border-radius: 50%;
+  }
+  #instafeed{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow-y:scroll;
+}
+@keyframes slide {
+    0% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-100%); 
+    }
+    100% {
+        transform: translateY(-200%); 
+    }
+}
+
+#instafeed img{
+    height: 30vw;
+    height: 30vw;
+    width: 30vw;
+    animation: slide 30s linear infinite; 
+}
+
+.header{
+    display: flex; 
+    flex-direction:row;
+    justify-content: space-around;
+    margin-left: 2vw;
+    margin-right:2vw;
+}
+.header a{
+    text-decoration:none;
+    color: black;
+}
+.header a:hover{
+    text-decoration:none;
+    color: black;
+}
+
+.header img{
+    width: 5vw;
+    height: 5vw;
+    border-radius:50%;
+    margin-top:1vh;
+    margin-bottom:1vh;
+}
 }
 
 .WasteFactsComponent{
