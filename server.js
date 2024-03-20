@@ -4,7 +4,7 @@ const express = require('express');
 const favicon = require('serve-favicon')
 const logger = require('morgan');
 const app = express();
-const PORT = process.env.PORT || 7999;
+const PORT = process.env.PORT || 8000;
 const path = require('path');
 const { Client } = require('pg')
 
@@ -13,7 +13,7 @@ const client = new Client({
 	host: process.env.PGHOST,
 	database: process.env.PGDATABASE,
 	password: process.env.PGPASSWORD,
-	port: PORT,
+	port: process.env.PORT,
 	ssl: {
 		rejectUnauthorized: false,
 	}
