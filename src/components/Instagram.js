@@ -2,8 +2,8 @@
 export default function Instagram(){
 
     return(
-        <>
-            <div></div>
-        </>
+        <div className="Instagram">
+            
+        </div>
     )
 }

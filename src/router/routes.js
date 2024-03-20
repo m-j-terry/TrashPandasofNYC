@@ -5,8 +5,8 @@ import Contact from '../pages/Contact';
 const routes = [
 	{
 		Component: Contact,
-		key: 'Contact',
-		path: '/contact'
+		key: '@trash.pandas_ofnyc',
+		path: '/pandas'
 	},
 	{
 		Component: Home,
@@ -15,8 +15,8 @@ const routes = [
 	},
 	{
 		Component: About,
-		key: 'About',
-		path: '/about'
+		key: 'Dumpster Diving Spreadsheet',
+		path: '/sheet'
 	}
 ];
 

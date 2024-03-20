@@ -38,6 +38,14 @@ module.exports = env => {
 						'sass-loader',
 						'postcss-loader'
 					]
+				}, 
+				{
+					test: /\.(png|jpe?g|gif)$/i,
+					use: [
+						{
+							loader: 'file-loader'
+						}
+					]
 				}
 			]
 		},

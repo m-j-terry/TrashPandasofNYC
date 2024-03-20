@@ -13,7 +13,9 @@
 /* harmony export */ });
 /* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 function Instagram() {
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", null));
+  return /*#__PURE__*/React.createElement("div", {
+    className: "Instagram"
+  });
 }
 
 /***/ }),
@@ -63,10 +65,11 @@ const NavBar = props => {
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(props) {
   const [corporations, setCorporations] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
   const [corporation, setCorporation] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
   const [items, setItems] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
+  const [id, setId] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     function fetchCorporations() {
       return _fetchCorporations.apply(this, arguments);
@@ -81,6 +84,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       return _fetchCorporations.apply(this, arguments);
     }
     fetchCorporations();
+    setId('active');
   }, []);
   function selectCorporation(_x) {
     return _selectCorporation.apply(this, arguments);
@@ -99,20 +103,23 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   return /*#__PURE__*/React.createElement("div", {
     className: "SheetsComponent"
   }, /*#__PURE__*/React.createElement("iframe", {
+    id: id,
     className: "iframe",
     src: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGM2bcNxW9mAuIU95k3llQI_n396jS7gEC-2j7huUvP8ctfU_OlkSygpK2A3uA2kjIphcQX8L_oJ6p/pubhtml"
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "neondb"
-  }, /*#__PURE__*/React.createElement("h2", {
+  }), /*#__PURE__*/React.createElement("h2", {
     id: "SQL"
   }, "SQL Datebase"), /*#__PURE__*/React.createElement("div", {
+    className: "neondb"
+  }, /*#__PURE__*/React.createElement("div", {
     className: "corps"
   }, corporations.map(corporation => /*#__PURE__*/React.createElement("div", {
     className: "corp"
   }, /*#__PURE__*/React.createElement("button", {
     className: "corpsButton",
     onClick: () => selectCorporation(corporation.name)
-  }, corporation.name), /*#__PURE__*/React.createElement("button", null, "$", corporation.total)))), items.length > 1 && /*#__PURE__*/React.createElement("div", {
+  }, corporation.name), /*#__PURE__*/React.createElement("button", {
+    className: "corpsButton"
+  }, "$", corporation.total)))), items.length > 1 && /*#__PURE__*/React.createElement("div", {
     className: "items"
   }, /*#__PURE__*/React.createElement("div", {
     className: "corporationHeader"
@@ -227,19 +234,50 @@ root.render( /*#__PURE__*/React.createElement(react__WEBPACK_IMPORTED_MODULE_0__
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Sheets__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Sheets */ "./src/components/Sheets.js");
+/* harmony import */ var _public_img_us_jpeg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../public/img/us.jpeg */ "./public/img/us.jpeg");
 /* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 
+
 function About(props) {
+  const [id, setId] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    setId("active");
+    console.log(id);
+  }, []);
   return /*#__PURE__*/React.createElement("div", {
     className: "AboutPage"
   }, /*#__PURE__*/React.createElement("center", null, /*#__PURE__*/React.createElement("div", {
+    id: id,
     className: "background"
   }, /*#__PURE__*/React.createElement("img", {
-    src: "https://res.cloudinary.com/dlqhluouv/image/upload/v1710826594/IMG_0150_q61tb8.jpg"
-  })), /*#__PURE__*/React.createElement("h1", null, "About the Project"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "Who are we?"), /*#__PURE__*/React.createElement("p", null, "My name is Michael. I am a (former) educator, software developer, writer, and social activist. "), /*#__PURE__*/React.createElement("p", null, "Magdalena and I began a journey in November of 2019. We had been dumpster diving around Brooklyn and Manhattan since 2018 when we decided to create an instagram account to document the quantity (and quality) of all the things we were finding in the trash. Toothpaste. Candy bars. Razors. Feminine hygeine products. Crackers and other dry goods. Holiday goods. And so much more!"), /*#__PURE__*/React.createElement("p", null, "When we made our instagram, I also started a ", /*#__PURE__*/React.createElement("a", {
+    src: _public_img_us_jpeg__WEBPACK_IMPORTED_MODULE_2__["default"]
+  })), /*#__PURE__*/React.createElement("h1", {
+    id: id
+  }, "About the Project"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+    id: id
+  }, "Who are we?"), /*#__PURE__*/React.createElement("p", {
+    id: id
+  }, "My name is Michael. I am a (former) educator, software developer, writer, and social activist. "), /*#__PURE__*/React.createElement("p", {
+    id: id
+  }, "Magdalena and I had been dumpster diving around Brooklyn and Manhattan for over a year when we decided to create an ", /*#__PURE__*/React.createElement("a", {
+    id: id,
+    href: "https://www.instagram.com/trash.pandas_ofnyc/?hl=en"
+  }, "instagram account"), " in 2019 to document the quantity (and quality) of all the things we were finding in the trash. Toothpaste. Candy bars. Razors. Feminine hygeine products. Crackers and dry goods. Holiday items, decorations and treats. And so much more!"), /*#__PURE__*/React.createElement("p", {
+    id: id
+  }, "When we made our ", /*#__PURE__*/React.createElement("a", {
+    id: id,
+    href: "https://www.instagram.com/trash.pandas_ofnyc/?hl=en"
+  }, "instagram"), ", I also started a ", /*#__PURE__*/React.createElement("a", {
+    id: id,
     href: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGM2bcNxW9mAuIU95k3llQI_n396jS7gEC-2j7huUvP8ctfU_OlkSygpK2A3uA2kjIphcQX8L_oJ6p/pubhtml"
-  }, "spreadsheet"), " to document the total value of everything we were pulling from the trash\u2014six nights a week, 52 weeks a year!"), /*#__PURE__*/React.createElement("p", null, "While we have not posted on our instagram in quite sometime nor have we updated our spreadsheet, the 'data' we collected was monumental. Just the two of us checking a couple of stores' dumpsters each night were able to document over $150,000 of wasted goods in the year and a half we collected data, which was more than our combined income at the time! We didn't sell any of it. We 'redistributed' it out to friends and across our community at work and to our community through neighborhood fridges/pantries and directly off our stoop. "), /*#__PURE__*/React.createElement("p", null, "But if this is the trend for small cornerstore CVS' and Walgreens in the little sliver of New York that we covered each night, imagine this trend magnified across the city, the country, the entire global market."), /*#__PURE__*/React.createElement("h2", null, "The Trash Pandas Dumpster Diving Spreadsheet"), /*#__PURE__*/React.createElement(_components_Sheets__WEBPACK_IMPORTED_MODULE_1__["default"], null))));
+  }, "spreadsheet"), " to document the total value of everything we were pulling from the trash\u2014six nights a week, 52 weeks a year!"), /*#__PURE__*/React.createElement("p", {
+    id: id
+  }, "While we have not posted on our instagram in quite sometime nor have we updated our spreadsheet since 2021, the 'data' we collected was monumental. Just the two of us checking a couple of stores' dumpsters each night were able to document over $150,000 of wasted goods in the year and a half we were collecting data, which was more than our combined income at the time! We didn't sell any of it. We 'redistributed' it out to friends/coworkers and to our community through neighborhood fridges/pantries and directly off our stoop."), /*#__PURE__*/React.createElement("p", {
+    id: id
+  }, "But if this is the trend for the tiny CVS and Walgreens in the little sliver of New York that we covered, imagine this trend magnified across the city, the country, the entire global market!"), /*#__PURE__*/React.createElement("h2", {
+    id: id
+  }, "The Trash Pandas Dumpster Diving Spreadsheet"), /*#__PURE__*/React.createElement(_components_Sheets__WEBPACK_IMPORTED_MODULE_1__["default"], null))));
 }
 
 /***/ }),
@@ -256,13 +294,64 @@ function About(props) {
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Instagram__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Instagram */ "./src/components/Instagram.js");
+/* harmony import */ var _public_img_diving2_jpeg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../public/img/diving2.jpeg */ "./public/img/diving2.jpeg");
+/* harmony import */ var _public_img_garbage_jpeg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../public/img/garbage.jpeg */ "./public/img/garbage.jpeg");
 /* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
 
 
 function Contact(props) {
   return /*#__PURE__*/React.createElement("div", {
     className: "ContactPage"
-  }, /*#__PURE__*/React.createElement("center", null, /*#__PURE__*/React.createElement("h1", null, "This is the ", props.page, " page"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", null, "Trash Pandas Instagram"), /*#__PURE__*/React.createElement(_components_Instagram__WEBPACK_IMPORTED_MODULE_1__["default"], null))));
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "background"
+  }, /*#__PURE__*/React.createElement("img", {
+    src: _public_img_garbage_jpeg__WEBPACK_IMPORTED_MODULE_3__["default"]
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "column"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "header"
+  }, /*#__PURE__*/React.createElement("img", {
+    className: "thumbnail",
+    src: _public_img_diving2_jpeg__WEBPACK_IMPORTED_MODULE_2__["default"]
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "column"
+  }, /*#__PURE__*/React.createElement("h1", null, /*#__PURE__*/React.createElement("a", {
+    href: "https://www.instagram.com/trash.pandas_ofnyc/?hl=en"
+  }, props.page)), /*#__PURE__*/React.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "column"
+  }, /*#__PURE__*/React.createElement("p", null, "277"), /*#__PURE__*/React.createElement("p", null, "posts")), /*#__PURE__*/React.createElement("div", {
+    className: "column"
+  }, /*#__PURE__*/React.createElement("p", null, "~6,400"), /*#__PURE__*/React.createElement("p", null, "followers")), /*#__PURE__*/React.createElement("div", {
+    className: "column"
+  }, /*#__PURE__*/React.createElement("p", null, "418"), /*#__PURE__*/React.createElement("p", null, "following"))))), /*#__PURE__*/React.createElement("p", {
+    className: "left"
+  }, "Maggie, Michael, Boone and Marcel"), /*#__PURE__*/React.createElement("p", {
+    className: "left"
+  }, "Let's save the planet; come dive into the trash with us!")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_components_Instagram__WEBPACK_IMPORTED_MODULE_1__["default"], null)), /*#__PURE__*/React.createElement("div", {
+    className: "column"
+  }, /*#__PURE__*/React.createElement("h2", {
+    id: "center"
+  }, "waste and eco-warriors"), /*#__PURE__*/React.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
+    href: "https://www.instagram.com/anurbanharvester/?hl=en"
+  }, "@anurbanharvester"), " | ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.linkedin.com/in/matt-homewood/"
+  }, "Matt Homewood")), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
+    href: "https://www.instagram.com/thetrashwalker/?hl=en"
+  }, "@theTrashWalker"), " | ", /*#__PURE__*/React.createElement("a", {
+    href: "https://www.linkedin.com/in/anna-sacks-718025a6/"
+  }, "Anna Sacks")), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
+    href: "https://www.instagram.com/pattiegonia/?hl=en"
+  }, "@pattiegonia")), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
+    href: "https://www.tiktok.com/@dumpsterdivingmama?_t=8kpUs6fCoQQ&_r=1"
+  }, "@dumpsterdivingmama")), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
+    href: "https://www.instagram.com/letsreducefoodwastenyc/?hl=en"
+  }, "@letsreducefoodwastenyc")))));
 }
 
 /***/ }),
@@ -352,18 +441,57 @@ const AppRouter = () => {
 
 const routes = [{
   Component: _pages_Contact__WEBPACK_IMPORTED_MODULE_2__["default"],
-  key: 'Contact',
-  path: '/contact'
+  key: '@trash.pandas_ofnyc',
+  path: '/pandas'
 }, {
   Component: _pages_Home__WEBPACK_IMPORTED_MODULE_1__["default"],
   key: 'Home',
   path: '/'
 }, {
   Component: _pages_About__WEBPACK_IMPORTED_MODULE_0__["default"],
-  key: 'About',
-  path: '/about'
+  key: 'Dumpster Diving Spreadsheet',
+  path: '/sheet'
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (routes);
+
+/***/ }),
+
+/***/ "./public/img/diving2.jpeg":
+/*!*********************************!*\
+  !*** ./public/img/diving2.jpeg ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "469881b7aebaa4eefd99f6a80e85d362.jpeg");
+
+/***/ }),
+
+/***/ "./public/img/garbage.jpeg":
+/*!*********************************!*\
+  !*** ./public/img/garbage.jpeg ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "4d645185f07c7571b69e1486e0544e65.jpeg");
+
+/***/ }),
+
+/***/ "./public/img/us.jpeg":
+/*!****************************!*\
+  !*** ./public/img/us.jpeg ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "9a0078912a63997b22acb63df4b1a60e.jpeg");
 
 /***/ })
 
@@ -456,6 +584,18 @@ const routes = [{
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -468,6 +608,29 @@ const routes = [{
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
@@ -533,4 +696,4 @@ const routes = [{
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.e2b0cc827591fb4517b0f17b91b7144a.js.map
+//# sourceMappingURL=App.35c5113249482145b4d0b9f40f6d5a9f.js.map

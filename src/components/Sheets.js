@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 
     
-export default function(){
+export default function(props){
     const [corporations, setCorporations] = useState([]);
     const [corporation, setCorporation] = useState('')
     const [items, setItems] = useState([])
+    const [id, setId] = useState('')
 
     useEffect(() => {
         async function fetchCorporations() {
@@ -14,6 +15,7 @@ export default function(){
             setCorporations(corps.rows);
         }
         fetchCorporations()
+        setId('active')
     }, [])
 
     async function selectCorporation(name){
@@ -27,15 +29,14 @@ export default function(){
 
     return(
         <div className="SheetsComponent">
-            <iframe className="iframe" src = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGM2bcNxW9mAuIU95k3llQI_n396jS7gEC-2j7huUvP8ctfU_OlkSygpK2A3uA2kjIphcQX8L_oJ6p/pubhtml"></iframe>
-
-            <div className="neondb">
+            <iframe id={id} className="iframe" src = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGM2bcNxW9mAuIU95k3llQI_n396jS7gEC-2j7huUvP8ctfU_OlkSygpK2A3uA2kjIphcQX8L_oJ6p/pubhtml"></iframe>
             <h2 id="SQL">SQL Datebase</h2>
+            <div className="neondb">
                 <div className="corps">
                     {corporations.map( (corporation) => (
                         <div className="corp">
                             <button className="corpsButton" onClick={() => selectCorporation(corporation.name)}>{corporation.name}</button>
-                            <button>${corporation.total}</button>
+                            <button className="corpsButton">${corporation.total}</button>
                         </div>
                     ))}
                 </div>
