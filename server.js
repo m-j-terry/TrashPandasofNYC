@@ -8,14 +8,12 @@ const PORT = process.env.PORT || 7999;
 const path = require('path');
 const { Client } = require('pg')
 
-// app.use(cors());
-
 const client = new Client({
 	user: process.env.PGUSER,
 	host: process.env.PGHOST,
 	database: process.env.PGDATABASE,
 	password: process.env.PGPASSWORD,
-	port: 5432,
+	port: PORT,
 	ssl: {
 		rejectUnauthorized: false,
 	}
@@ -43,9 +41,7 @@ app.use(logger('dev'));
 
 /* Controller*/
 const corporationsRouter = require('./routes/api/corporations');
-const itemsRouter = require('./routes/api/items');
 app.use('/api/corporations', corporationsRouter)
-app.use('api/items', itemsRouter)
 
 // for react router
 app.get('*', (req, res) => {
