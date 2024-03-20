@@ -364,7 +364,7 @@ function About(props) {
   }, "Magdalena and I had been dumpster diving around Brooklyn and Manhattan for over a year when we decided to create an ", /*#__PURE__*/React.createElement("a", {
     id: id,
     href: "https://www.instagram.com/trash.pandas_ofnyc/?hl=en"
-  }, "instagram account"), " in 2019 to document the quantity (and quality) of all the things we were finding in the trash. Toothpaste. Candy bars. Razors. Feminine hygeine products. Crackers and dry goods. Holiday items, decorations and treats. And so much more!"), /*#__PURE__*/React.createElement("p", {
+  }, "instagram account"), " in 2019 to document the quantity (and quality) of all the things we were finding in the trash. Toothpaste. Candy bars. Razors. Pads and tampons. Crackers and dry goods. Pet food and products. Holiday items, decorations and treats. And so much more!"), /*#__PURE__*/React.createElement("p", {
     id: id
   }, "When we made our ", /*#__PURE__*/React.createElement("a", {
     id: id,
@@ -376,7 +376,7 @@ function About(props) {
     id: id
   }, "While we have not posted on our instagram in quite sometime nor have we updated our spreadsheet since 2021, the 'data' we collected is so valuable. Just the two of us checking a couple of dumpsters each night were able to document over $150,000 of wasted goods in a year and a half, which was more than our combined income at the time!"), /*#__PURE__*/React.createElement("p", {
     id: id
-  }, " We didn't sell any of it. We 'redistributed' it out to friends/coworkers and to our community through neighborhood fridges/pantries and directly off our stoop. Imagine a world where hundreds of millions of dollars of usable (already created and distributed!) goods were given to those who would use them rather than being sent to the landfill!"), /*#__PURE__*/React.createElement("h2", {
+  }, "We didn't sell any of it. We 'redistributed' it out to friends/coworkers and to our community through neighborhood fridges/pantries and directly off our stoop. Imagine a world where hundreds of millions of dollars of usable (already created and distributed!) goods were given to those who would use them rather than being sent to the landfill!"), /*#__PURE__*/React.createElement("h2", {
     id: id
   }, "The Trash Pandas Dumpster Diving Spreadsheet"), /*#__PURE__*/React.createElement(_components_Sheets__WEBPACK_IMPORTED_MODULE_1__["default"], null))));
 }
@@ -1315,4 +1315,4 @@ const routes = [{
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.130fbe2f105c06412ea6d9a126685b79.js.map
+//# sourceMappingURL=App.8e2d2f1fabf7dedb602f566273f0d2e2.js.map

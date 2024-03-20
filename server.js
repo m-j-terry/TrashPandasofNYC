@@ -4,7 +4,7 @@ const express = require('express');
 const favicon = require('serve-favicon')
 const logger = require('morgan');
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 7999;
 const path = require('path');
 const { Client } = require('pg')
 
@@ -15,7 +15,7 @@ const client = new Client({
 	host: process.env.PGHOST,
 	database: process.env.PGDATABASE,
 	password: process.env.PGPASSWORD,
-	port: process.env.PORT,
+	port: 5432,
 	ssl: {
 		rejectUnauthorized: false,
 	}
@@ -25,29 +25,6 @@ client.connect()
 	.then(() => console.log('Connected to the database'))
 	.catch(err => console.error('Error connecting to the database', err))
 module.exports = client 
-
-// const postgres = require('postgres');
-
-// let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
-
-// const sql = postgres({
-// 	host: PGHOST,
-// 	database: PGDATABASE,
-// 	username: PGUSER,
-// 	password: PGPASSWORD,
-// 	port: 5432,
-// 	ssl: 'require',
-// 	connection: {
-// 		options: `project=${ENDPOINT_ID}`,
-// 	},
-// });
-
-// async function getPgVersion() {
-// 	const result = await sql`select version()`;
-// 	console.log(result);
-// }
-
-// getPgVersion();
 
 /* Middleware */
 app.use(express.json());
