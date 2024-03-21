@@ -11,9 +11,9 @@ export default function(props){
         async function fetchCorporations() {
             try {
                 const response = await fetch('https://nodejs-serverless-function-express-test-ddi4jpnb0.vercel.app/api/corporation/');
-                if (!response.ok) {
-                    throw new Error('Failed to fetch data');
-                }
+                // if (!response.ok) {
+                //     throw new Error('Failed to fetch data');
+                // }
                 const corps = await response.json();
                 console.log(corps.rows);
                 setCorporations(corps.rows);
