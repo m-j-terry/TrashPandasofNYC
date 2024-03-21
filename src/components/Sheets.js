@@ -8,9 +8,19 @@ export default function(props){
     const [id, setId] = useState('')
 
     useEffect(() => {
+        async function fetchCorporation(){
+            try {
+                const response = await fetch('https://nodejs-serverless-function-express-test-ten.vercel.app/api/corporation/cvs')
+                const corp = await response.json()
+                console.log(corp)
+                setItems(corp)
+            } catch (error) {
+                console.error('Error fetching data:', error);   
+            }
+        }
         async function fetchCorporations() {
             try {
-                const response = await fetch('https://nodejs-serverless-function-express-test-ddi4jpnb0.vercel.app/api/corporation/');
+                const response = await fetch('https://nodejs-serverless-function-express-test-ten.vercel.app/api/corporation');
                 // if (!response.ok) {
                 //     throw new Error('Failed to fetch data');
                 // }
@@ -22,7 +32,7 @@ export default function(props){
                 // Handle error, display error message, etc.
             }
         }
-    
+        fetchCorporation()
         fetchCorporations();
         setId('active')
     }, [])
@@ -30,7 +40,7 @@ export default function(props){
     async function selectCorporation(name){
         console.log(name)
         setCorporation(name)
-        const response = await fetch(`https://nodejs-serverless-function-express-test-ddi4jpnb0.vercel.app/api/corporation/${name}`)
+        const response = await fetch(`https://nodejs-serverless-function-express-test-ten.vercel.app/api/corporation/${name}`)
         const corp = await response.json()
         console.log(corp)
         setItems(corp)
