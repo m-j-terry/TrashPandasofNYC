@@ -9,12 +9,21 @@ export default function(props){
 
     useEffect(() => {
         async function fetchCorporations() {
-            const response = await fetch('https://nodejs-serverless-function-express-test-ddi4jpnb0.vercel.app/api/corporation/')
-            const corps = await response.json()
-            console.log(corps.rows)
-            setCorporations(corps.rows);
+            try {
+                const response = await fetch('https://nodejs-serverless-function-express-test-ddi4jpnb0.vercel.app/api/corporation/');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data');
+                }
+                const corps = await response.json();
+                console.log(corps.rows);
+                setCorporations(corps.rows);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                // Handle error, display error message, etc.
+            }
         }
-        fetchCorporations()
+    
+        fetchCorporations();
         setId('active')
     }, [])
 
