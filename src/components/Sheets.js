@@ -10,9 +10,7 @@ export default function(props){
     useEffect(() => {
         async function fetchCorporations() {
             try {
-                const response = await fetch('https://nodejs-serverless-function-express-test-ddi4jpnb0.vercel.app/api/corporation/', {
-                    mode: 'no-cors'
-                });
+                const response = await fetch('https://nodejs-serverless-function-express-test-ddi4jpnb0.vercel.app/api/corporation/');
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }
