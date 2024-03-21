@@ -9,7 +9,7 @@ export default function(props){
 
     useEffect(() => {
         async function fetchCorporations() {
-            const response = await fetch('/api/corporations/')
+            const response = await fetch('https://nodejs-serverless-function-express-test-ddi4jpnb0.vercel.app/api/corporation/')
             const corps = await response.json()
             console.log(corps.rows)
             setCorporations(corps.rows);
@@ -21,7 +21,7 @@ export default function(props){
     async function selectCorporation(name){
         console.log(name)
         setCorporation(name)
-        const response = await fetch(`/api/corporations/${name}`)
+        const response = await fetch(`https://nodejs-serverless-function-express-test-ddi4jpnb0.vercel.app/api/corporation/${name}`)
         const corp = await response.json()
         console.log(corp)
         setItems(corp)
